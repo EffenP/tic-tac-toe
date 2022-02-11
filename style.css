@@ -1,0 +1,105 @@
+
+:root{
+    --background-lighter: #C6CAD2;
+    --background-colour: #A1A6B4;
+    --background-darker: #82899B;
+    --accent-colour: #FF8C42;
+    --teal-blue: #0F5257;
+    --danger-colour: #CE2D4F;
+}
+
+
+body {
+    margin: 0;
+}
+
+.return-btn-wrapper {
+    top: 0;
+    left: 0;
+}
+
+.return-btn {
+    padding: 1em;
+    margin: 1em;
+}
+
+.score-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    gap: 3em;
+}
+
+.player {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: black;
+    background-color: var(--accent-colour);
+    padding: 0 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.game-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.game-board {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: 8em 8em 8em;
+    grid-template-columns: 8em 8em 8em;
+}
+
+.game-card {
+    background: var(--background-colour);
+    border: 1px solid var(--background-colour);
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(217, 217, 217);
+    transition-property: all;
+    transition-duration: 200ms;
+}
+
+.game-card:hover{
+    border-radius: 20%;
+    transform: scale(1.05);
+    background-color: var(--background-lighter);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5)
+
+}
+
+.round-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    gap: 2em;   
+}
+
+.round-info {
+    user-select: none;
+    margin-top: .5em;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: black;
+    background-color: rgba(0, 0, 0, );
+    padding: 0 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, 0.4);
+}
