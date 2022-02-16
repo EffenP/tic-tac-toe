@@ -70,6 +70,8 @@ body {
     color: rgb(217, 217, 217);
     transition-property: all;
     transition-duration: 200ms;
+    content: '';
+    position: relative;
 }
 
 .game-card:hover{
@@ -77,8 +79,48 @@ body {
     transform: scale(1.05);
     background-color: var(--background-lighter);
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5)
+}
+
+.game-card.cross::before, 
+.game-card.cross::after{
+    content: '';
+    position: absolute;
+    width: calc((100px) * .15);
+    height: 100px;
+    background-color: red;
+}
+.game-card.cross::before{
+    transform: rotate(45deg);
+}
+.game-card.cross::after{
+    transform: rotate(-45deg);
+}
+
+.game-card.circle::before, 
+.game-card.circle::after{
+    content: '';
+    position: absolute;
+   border-radius: 50%;
+   
+}
+
+.game-card.circle::before{
+    width: 100px;
+    height: 100px;
+    background-color: red;
 
 }
+
+.game-card.circle::after{
+    width: calc((100px) * .7);
+    height: calc((100px) * .7);
+    background-color: var(--background-colour);
+
+}
+
+
+
+
 
 .round-wrapper {
     position: relative;
