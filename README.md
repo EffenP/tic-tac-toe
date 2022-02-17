@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-My attempt at creating a JS implementation of the kidsgame tic-tac-toe.
+My attempt at creating a JS implementation of the kids game tic-tac-toe.
 ![Screenshot](screenshot2.png)
 
 Try it youreself Here https://effenp.github.io/tic-tac-toe/
