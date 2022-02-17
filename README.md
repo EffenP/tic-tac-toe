@@ -3,7 +3,7 @@
 My attempt at creating a JS implementation of the kidsgame tic-tac-toe.
 ![Screenshot](screenshot2.png)
 
-Try it youreself Here link
+Try it youreself Here https://effenp.github.io/tic-tac-toe/
 
 # Todo
 
