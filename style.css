@@ -13,14 +13,11 @@ body {
     margin: 0;
 }
 
-.return-btn-wrapper {
-    top: 0;
-    left: 0;
-}
-
-.return-btn {
-    padding: 1em;
-    margin: 1em;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .score-wrapper {
@@ -28,22 +25,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 5em;
     margin-bottom: 2em;
     gap: 3em;
 }
 
-.player {
+.player-one, 
+.player-two {
     user-select: none;
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em;
     color: black;
-    background-color: var(--accent-colour);
+    background-color: var(--background-lighter);
     padding: 0 20px;
+    border: 1px solid black;
     border-radius: 25px;
     box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.current {
+    background-color: var(--danger-colour);
+    
+    
 }
 
 .game-wrapper{
@@ -72,6 +77,7 @@ body {
     transition-duration: 200ms;
     content: '';
     position: relative;
+    cursor: pointer;
 }
 
 .game-card:hover{
@@ -87,15 +93,8 @@ body {
     position: absolute;
     width: calc((100px) * .15);
     height: 100px;
-    background-color: red;
+    background-color: var(--danger-colour);
 }
-.game-card.cross::before{
-    transform: rotate(45deg);
-}
-.game-card.cross::after{
-    transform: rotate(-45deg);
-}
-
 .game-card.circle::before, 
 .game-card.circle::after{
     content: '';
@@ -104,13 +103,24 @@ body {
    
 }
 
+.game-card.circle,
+.game-card.cross {
+    cursor: not-allowed;
+}   
+
+.game-card.cross::before{
+    transform: rotate(45deg);
+}
+.game-card.cross::after{
+    transform: rotate(-45deg);
+}
+
 .game-card.circle::before{
     width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: var(--teal-blue);
 
 }
-
 .game-card.circle::after{
     width: calc((100px) * .7);
     height: calc((100px) * .7);
@@ -118,18 +128,14 @@ body {
 
 }
 
-
-
-
-
 .round-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1em;
-    margin-bottom: 2em;
-    gap: 2em;   
+    margin-bottom: .5em;
+    
 }
 
 .round-info {
@@ -138,10 +144,45 @@ body {
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
+    font-size: 1.2em;
     color: black;
     background-color: rgba(0, 0, 0, );
     padding: 0 20px;
     border-radius: 25px;
     box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+
+.alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column ;
+}
+
+.alert button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.alert button:hover {
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.alert.show{
+    display: flex;
 }

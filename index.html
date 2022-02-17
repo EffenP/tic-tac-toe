@@ -10,23 +10,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="return-btn-wrapper">
-            <input type="button" class="return-btn" value="Return">
-        </div>
         <div class="score-wrapper">
-            <span class="player one">
+            <span class="player-one">
                 <span class="name-one">Player:</span>
                 <span class="score-one">0</span>
             </span>
-            <span class="player two">
+            <span class="player-two">
                 <span class="name-two">CPU:</span>
                 <span class="score-two">0</span>
             </span>
         </div>
         <div class="game-wrapper">
             <div class="game-board">
-                <div class="game-card cross"></div>
-                <div class="game-card circle"></div>
+                <div class="game-card"></div>
+                <div class="game-card"></div>
                 <div class="game-card"></div>
                 <div class="game-card"></div>
                 <div class="game-card"></div>
@@ -38,6 +35,11 @@
         </div>
         <div class="round-wrapper">
             <span class="round-info">Round: 0</span>
+        </div>
+
+        <div class="alert" id="alert">
+            <div class="alert-content"></div>
+            <button class="restart-btn">Restart</button>
         </div>
 
 
