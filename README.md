@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 
 My attempt at creating a JS implementation of the kidsgame tic-tac-toe.
-![Screenshot](Screenshot 2022-02-17 at 12.22.04.png)
+![Screenshot](ttt-screnshot.png)
 
 Try it youreself Here link
 
